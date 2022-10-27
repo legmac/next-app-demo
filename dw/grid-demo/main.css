@@ -1,0 +1,25 @@
+body {
+	background: linear-gradient(107.32deg, #804BD8 5.53%, #544AD8 97.3%);
+}
+
+.container {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: [startline] 1fr [middle]1fr 1fr [endline];
+	grid-auto-rows: 100px;
+	grid-auto-flow: dense;
+}
+
+.c1{
+	grid-row-start: middle;
+	grid-row-end: endline;
+}
+.container > div {
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	border: 2px solid #FE7A71;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
