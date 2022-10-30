@@ -6,15 +6,17 @@ import { TopLevelCategory, TopPageModel } from "../../interfaces/page.interface"
 import { ParsedUrlQuery } from "querystring";
 import { ProductModel } from "../../interfaces/product.interface";
 import { firstLevelMenu } from "../../helpers/helpers";
+import { TopPageComponent } from "../../page-components";
 
 // const firstCategory = 0
 
-function Course({ menu,page,prodcts }:CourseProps):JSX.Element {
-  return (
-    <>
-        {prodcts && prodcts.length}
-    </>
-  )
+function Course({ firstCategory,page,prodcts }:CourseProps):JSX.Element {
+  return <TopPageComponent
+    page={page}
+    firstCategory={firstCategory}
+    prodcts={prodcts}
+    />
+
 }
 
 export default withLayout(Course);
