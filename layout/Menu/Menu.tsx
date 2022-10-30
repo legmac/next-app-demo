@@ -25,14 +25,14 @@ const buildFirstLevel =()=>{
         {firstLevelMenu.map(m => (
             <div key={m.route}>
                 <Link href={`/${m.route}`} legacyBehavior>
-                <a>
-                    <div className={cn(styles.firstLevel, {
-                        [styles.firstLevelActive]: m.id == firstCategory
-                    })}>
-                        {m.icon}
-                        <span>{m.name}</span>
-                    </div>
-                </a>
+                    <a>
+                        <div className={cn(styles.firstLevel, {
+                            [styles.firstLevelActive]: m.id == firstCategory
+                        })}>
+                            {m.icon}
+                            <span>{m.name}</span>
+                        </div>
+                    </a>
                 </Link>
                 {m.id == firstCategory && buildSecondLevel(m)}
             </div>
