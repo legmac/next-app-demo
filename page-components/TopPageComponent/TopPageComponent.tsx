@@ -1,7 +1,7 @@
 import { TopPageComponentProps } from "./TopPageComponent.props"
 import styles from './TopPageComponent.module.css'
 import cn from 'classnames'
-import { Advantages, Card, HhData, Htag, P, Sort, Tag } from "../../components"
+import { Advantages, Card, HhData, Htag, P, Product, Sort, Tag } from "../../components"
 import { TopLevelCategory } from "../../interfaces/page.interface"
 import { SortEnum } from "../../components/Sort/Sort.props"
 import { useReducer } from "react"
@@ -23,7 +23,8 @@ export const TopPageComponent = ({page, prodcts: products, firstCategory }: TopP
       </div>
 
       <div>
-        {sortedProducts && sortedProducts.map(p=> (<div key={p._id}>{p.title}</div>))}
+        {/* {sortedProducts && sortedProducts.map(p=> (<div key={p._id}>{p.title}</div>))} */}
+        {sortedProducts && sortedProducts.map(p=> (<Product key={p._id} prosuct={p}/>))}
       </div>
 
       <div className={styles.hhstytle}>

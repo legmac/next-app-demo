@@ -1,6 +1,6 @@
-import React, { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
-export interface CarsProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>{
-    color?: 'white'|'blue';
-    children: ReactNode;
+export interface CardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+	color?: 'white' | 'blue';
+	children: ReactNode;
 }
