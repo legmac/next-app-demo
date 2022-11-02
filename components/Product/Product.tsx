@@ -12,7 +12,7 @@ import Image from 'next/image'
 export const Product = ({ prosuct: product, className, ...props}: ProductProps):JSX.Element => {
     return (
         <Card className={styles.prodcts}>
-            <div className={styles.logo}>
+            <div className={styles.logo} {...props}>
             <Image
                 src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
                 alt={product.title}
@@ -34,7 +34,7 @@ export const Product = ({ prosuct: product, className, ...props}: ProductProps):
             <Divider className={styles.hr}/>
 
             <div className={styles.description}>{product.description}</div>
-            <div className={styles.feture}>
+            <div className={styles.feature}>
                 {product.characteristics.map(c => (
                     <div className={styles.characteristics} key={c.name}>
                         <span className={styles.characteristicsName}>{c.name}</span>
