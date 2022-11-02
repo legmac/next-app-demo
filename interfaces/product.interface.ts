@@ -39,7 +39,7 @@ export interface ProductModel {
     blog: Blog;
     companyId: string;
     clicks: number;
-    reviews: ReviewModel;
+    reviews: ReviewModel[];
     reviewCount: number;
     reviewAvg?: number;
     disadvantages?: string;

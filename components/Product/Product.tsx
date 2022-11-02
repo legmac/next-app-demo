@@ -8,9 +8,14 @@ import {Button} from "../Button/Button"
 import { devlOfNum, priceRu } from "../../helpers/helpers"
 import { Divider } from "../Divider/Divider"
 import Image from 'next/image'
+import { useState } from "react"
+import { Review } from "../Review/Review"
 
 export const Product = ({ prosuct: product, className, ...props}: ProductProps):JSX.Element => {
+    const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
+
     return (
+        <>
         <Card className={styles.prodcts}>
             <div className={styles.logo} {...props}>
             <Image
@@ -58,9 +63,26 @@ export const Product = ({ prosuct: product, className, ...props}: ProductProps):
 
             <div  className={styles.actions}>
                 <Button appearance="primary">Узнать подробнее</Button>
-                <Button appearance="ghost" arrow={'right'} className={styles.reviewButton}>Читать отзывы</Button>
+                <Button appearance="ghost"
+                arrow={isReviewOpened ? 'down' : 'right'}
+                className={styles.reviewButton}
+                onClick={()=>setIsReviewOpened(!isReviewOpened)}>Читать отзывы</Button>
             </div>
 
         </Card>
+
+        <Card color='blue' className={cn(styles.reviews, {
+            [styles.opened]: isReviewOpened,
+            [styles.closed]: !isReviewOpened,
+        })}>
+            {product.reviews.map(r => (
+                <>
+                <Review key={r._id} review={r} />
+                <Divider/>
+                </>
+
+            ))}
+        </Card>
+    </>
     )
 }
