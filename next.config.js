@@ -1,5 +1,8 @@
 // https://github.com/vercel/next.js/discussions/30472#discussioncomment-1688149
 module.exports = {
+  images: {
+    domains: ['courses-top.ru']
+  },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(
       (rule) => rule.test && rule.test.test('.svg'),
