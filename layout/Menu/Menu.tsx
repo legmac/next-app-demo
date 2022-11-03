@@ -62,7 +62,7 @@ const buildSecondLevel =(menuItem: FirstLevelMenuItem)=>{
 const buildThirdLevel = (page: PageItem[], route: string)=>{
     return (
         page.map(p=> (
-            <Link href={`/${route}/${p.alias}`} legacyBehavior>
+            <Link href={`/${route}/${p.alias}`} legacyBehavior key={p._id}>
             <a className={cn(styles.thirdLevel, {
                 [styles.thirdLevelActive]: `/${route}/${p.alias}` == router.asPath
             })}>

@@ -11,6 +11,10 @@
     margin-bottom: 30px;
 }
 
+.feature {
+	grid-column: start / middle;
+}
+
 .title, .tags {
     grid-column: titlestart / middle;
 }
