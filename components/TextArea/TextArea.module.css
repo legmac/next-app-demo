@@ -1,5 +1,6 @@
 .TextArea {
     padding: 7px 15px;
+    width: 100%;
 
     color: var(--black);
     border: none;
@@ -15,4 +16,22 @@
 
 .TextArea::placeholder{
     color: var(--gray);
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.textareaWraper {
+    position: relative;
+}
+.errorMessage {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    color: red;
+}
+
+.errorsvg svg{
+    stroke: red;
 }

@@ -11,3 +11,17 @@
 .editable{
 	cursor: pointer;
 }
+
+.error {
+    border: 1px solid red;
+}
+
+.ratingWraper {
+    position: relative;
+}
+.errorMessage {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    color: red;
+}
