@@ -78,8 +78,8 @@ export const Product = ({ prosuct: product, className, ...props}: ProductProps):
         })}>
             {product.reviews.map(r => (
                 <div key={r._id}>
-                <Review key={r._id} review={r} />
-                <Divider/>
+                    <Review review={r} />
+                    <Divider/>
                 </div>
             ))}
             <ReviewForm productId={product._id}/>
