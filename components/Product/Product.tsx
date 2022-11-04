@@ -45,7 +45,7 @@ export const Product = ({ prosuct: product, className, ...props}: ProductProps):
             <div className={styles.tags}>{product.categories.map(c => <Tag key={c} className={styles.category} color="ghoust">{c}</Tag>)}</div>
             <div className={styles.priceTitle}>цена</div>
             <div className={styles.creditTitle}>кредит</div>
-            <div className={styles.rateTitle}><a href="#ref" onClick={()=>scrollToReview}>{product.reviewCount} {devlOfNum(product.reviewCount, ['отзыв','отзыва','отзывов'])}</a></div>
+            <div className={styles.rateTitle}><a href="#ref" onClick={()=>scrollToReview()}>{product.reviewCount} {devlOfNum(product.reviewCount, ['отзыв','отзыва','отзывов'])}</a></div>
             <Divider className={styles.hr}/>
 
             <div className={styles.description}>{product.description}</div>
