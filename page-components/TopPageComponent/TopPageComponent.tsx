@@ -4,7 +4,7 @@ import cn from 'classnames'
 import { Advantages, Card, HhData, Htag, P, Product, Sort, Tag } from "../../components"
 import { TopLevelCategory } from "../../interfaces/page.interface"
 import { SortEnum } from "../../components/Sort/Sort.props"
-import { useReducer } from "react"
+import { useEffect, useReducer } from "react"
 import { sortReducer } from "./sort.reducer"
 
 export const TopPageComponent = ({page, prodcts: products, firstCategory }: TopPageComponentProps):JSX.Element => {
@@ -13,6 +13,10 @@ export const TopPageComponent = ({page, prodcts: products, firstCategory }: TopP
   const setSort = (sort: SortEnum) => {
     dispathSort({type: sort});
   }
+
+  useEffect(()=>{
+    dispathSort({type: 'reset', initialState: products});
+  },[products])
 
   return (
       <div className={styles.wrapper}>
