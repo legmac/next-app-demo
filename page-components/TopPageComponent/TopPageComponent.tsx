@@ -28,7 +28,7 @@ export const TopPageComponent = ({page, prodcts: products, firstCategory }: TopP
 
       <div>
         {/* {sortedProducts && sortedProducts.map(p=> (<div key={p._id}>{p.title}</div>))} */}
-        {sortedProducts && sortedProducts.map(p=> (<Product key={p._id} prosuct={p}/>))}
+        {sortedProducts && sortedProducts.map(p=> (<Product layout key={p._id} prosuct={p}/>))}
       </div>
 
       <div className={styles.hhstytle}>
