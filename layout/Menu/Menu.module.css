@@ -42,16 +42,8 @@
 }
 
 .secondLevelBlock{
-    display: none;
-}
-
-.secondLevelBlockOpen{
-    display: block;
-}
-
-.secondLevelBlockOpen:last-child {
-    margin-bottom: 20px;
-
+    /* display: none; */
+    overflow: hidden;
 }
 
 .thirdLevel {
